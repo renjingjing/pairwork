@@ -1,0 +1,8 @@
+<h1>Snippets Home Page</h1>
+<h1>Kind: <%= @kind.name %></h1>
+<p>There are <%= @snippets.length %> snippets</p>
+<% @snippets.each do |snippet| %>
+  <div>
+    <%= link_to snippet.title, snippets_path(snippet) %>
+  </div>
+<% end %>

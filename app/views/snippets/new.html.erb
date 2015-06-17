@@ -1,0 +1,21 @@
+<h1>Snippets Home Page</h1>
+
+<%= form_for @snippet do |f| %>
+<div>
+  <%= f.label :kind %>
+  <%= f.collection_select :kind_id, Kind.all, :id, :name  %>
+</div>
+<br>
+
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :work %>
+    <%= f.text_area :work %>
+  </div>
+<br>
+  <%= f.submit "Save" %>
+<% end %>

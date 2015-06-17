@@ -1,0 +1,10 @@
+<h1>Snippets</h1>
+<p> <% @kinds.each do |kind| %>
+  <hr>
+<% @count=0 %>
+<% @snippets.each do |snippet| %>
+<% @count=@count+1 if snippet.kind_id==kind.id %>
+<% end %>
+<%= link_to "#{kind.name}(#{@count} snippets)" %>
+<% end %>
+</p>
